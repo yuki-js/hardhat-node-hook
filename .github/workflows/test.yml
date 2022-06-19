@@ -16,10 +16,7 @@ jobs:
         uses: actions/cache@v2
         with:
           key: npm
-          path: .
-          cache-path: .cache/npm
-          warn-if-active:
-            - npm-check-updates
+          path: node_modules
       - name: install
         run: npm ci
       - name: lint
